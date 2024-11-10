@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--v2 with fonts, color, formspark but no @media -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluelines Assured Chauffeur Services</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #3366cc;
+        }
+        header {
+            background-color: #00d4ff;
+            color: 004bb4;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #f5f5f5;
+            padding: 10px;
+        }
+        nav a {
+            color: 003a8b;
+            padding: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #00d4ff;
+        }
+        section {
+            padding: 20px;
+            text-align: left;
+        }
+        
+        h2 {
+            text-align:center;
+            text-indent: 0;
+        }
+        .services {
+            background-color: white;
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+            text-indent: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact {
+            background-color: white;
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #000088;
+            color: white;
+            text-align: center;
+            padding: 10px;
+<!--          position: fixed; -->
+            bottom: 0;
+            width: 100%;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Wacs Logo" width="200" height="100">
+        <h1>Bluelines Assured Chauffeur Services</h1>
+        <p>The reliable chauffeur service for the TV and Film industry</p>
+    </header>
+
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <section id="services">
+        <div class="services">
+            <h2>Our Services</h2>
+            <p>We offer premium chauffeur services for the TV and film industry.</p>
+            <ul>
+                <li>Airport Transfers</li>
+                <li>Corporate Travel</li>
+                <li>Unit Chauffeur</li>
+                <li>VIP Chauffeur</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form" action="https://submit.formspark.io/YOUR_FORM_ID" method="POST">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+              
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+              
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" required></textarea>
+              
+              <button type="submit">Send</button>
+              <p id="form-status"></p>
+            </form>
+
+<script>
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        status.textContent = 'Thanks for your message!';
+        form.reset();
+      } else {
+        status.textContent = 'Oops! There was a problem.';
+      }
+    } catch {
+      status.textContent = 'Oops! There was a problem.';
+    }
+  });
+</script>
+
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Bluelines where on time is too late.</p>
+        <p>&copy; 2024 Oakwood Trading Limited. All rights reserved.</p>
+        <p>Sorry just a surge test page not for public use</p>
+    </footer>
+
+</body>
+</html>
