@@ -113,7 +113,7 @@
     <section id="contact">
         <div class="contact">
             <h2>Contact Us</h2>
-            <form id="contact-form" action="https://submit.formspark.io/6kaGjGHIi" method="POST">
+            <form id="contact-form" action="https://submit.formspark.io/YOUR_FORM_ID" method="POST">
               <label for="name">Name:</label>
               <input type="text" id="name" name="name" required>
               
@@ -126,6 +126,14 @@
               <button type="submit">Send</button>
               <p id="form-status"></p>
             </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Bluelines where on time is too late.</p>
+        <p>&copy; 2024 Oakwood Trading Limited. All rights reserved.</p>
+        <p>Sorry just a surge test page not for public use</p>
+    </footer>
 
 <script>
   const form = document.getElementById('contact-form');
@@ -146,20 +154,12 @@
         status.textContent = 'Oops! There was a problem.';
       }
     } catch {
-      status.textContent = 'Oops! There was a problem.';
+      status.textContent = 'Oops! We caught a problem.';
     }
   });
+
+
 </script>
-
-
-        </div>
-    </section>
-
-    <footer>
-        <p>Bluelines where on time is too late.</p>
-        <p>&copy; 2024 Oakwood Trading Limited. All rights reserved.</p>
-        <p>Sorry just a surge test page not for public use</p>
-    </footer>
 
 </body>
 </html>
