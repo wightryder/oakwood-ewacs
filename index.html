@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bluelines Assured Chauffeur Services</title>
     <style>
+
         body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
@@ -62,12 +63,11 @@
             color: white;
             text-align: center;
             padding: 10px;
-<!--          position: fixed; -->
             bottom: 0;
             width: 100%;
         }
         input[type="text"], input[type="email"], textarea {
-            width: 100%;
+            width: 95%;
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ccc;
@@ -81,6 +81,10 @@
         }
         input[type="submit"]:hover {
             background-color: #555;
+        }
+        label.required:after {
+          content: " *";
+          color: red;
         }
     </style>
 </head>
@@ -112,9 +116,9 @@
 
     <section id="contact">
         <div class="contact">
-            <h2>Contact Us</h2>
+            <h2>Contact</h2>
                 <form action="https://submit-form.com/6kaGjGHIi">
-                  <label for="name">Name</label>
+                  <label for="name" class="required">Name</label>
                   <input type="text" id="name" name="name" placeholder="Name" required="" />
                   <label for="email">Email</label>
                   <input type="email" id="email" name="email" placeholder="Email" required="" />
@@ -125,7 +129,8 @@
                     placeholder="Git Message"
                     required=""
                   ></textarea>
-                  <button type="submit">Send</button>
+                  <p>* Required</p>
+                  <button type="submit">Contact Roland</button>
                 </form>
 
         </div>
