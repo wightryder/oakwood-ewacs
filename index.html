@@ -66,7 +66,7 @@
             bottom: 0;
             width: 100%;
         }
-        input[type="text"], input[type="email"], textarea {
+        input[type="text"], input[type="email"], input[type="phone"], textarea {
             width: 95%;
             padding: 10px;
             margin: 10px 0;
@@ -103,13 +103,14 @@
 
     <section id="services">
         <div class="services">
-            <h2>Our Services</h2>
-            <p>We offer premium chauffeur services for the TV and film industry.</p>
+            <h2>Our Service</h2>
+            <p>We offer a premium chauffeur service for the TV and film industry.</p>
             <ul>
-                <li>Airport Transfers</li>
-                <li>Corporate Travel</li>
-                <li>Unit Chauffeur</li>
-                <li>VIP Chauffeur</li>
+                <li>Enhanced DBS</li>
+                <li>Institute of Advanced Motoring Certification</li>
+                <li>Etc</li>
+                <li>Etc</li>
+                <li>Last Etc</li>
             </ul>
         </div>
     </section>
@@ -120,14 +121,22 @@
                 <form action="https://submit-form.com/6kaGjGHIi">
                   <label for="name" class="required">Name</label>
                   <input type="text" id="name" name="name" placeholder="Name" required="" />
-                  <label for="email">Email</label>
+
+                  <label for="email" class="required">Email</label>
                   <input type="email" id="email" name="email" placeholder="Email" required="" />
+
+                  <label for="phone" class="required">Phone</label>
+                  <input type="phone" id="phone" name="phone" placeholder="Telephone number" required="" />
+
+                  <label for="callback" class="required">Contact preference</label>
+                  <input type="text" id="callback" name="callback" placeholder="Phone, Email or Text Msg" required="" />
+
+
                   <label for="message">Message</label>
                   <textarea
                     id="message"
                     name="message"
-                    placeholder="Git Message"
-                    required=""
+                    placeholder="Optional Message (Github)"
                   ></textarea>
                   <p>* Required</p>
                   <button type="submit">Contact Roland</button>
