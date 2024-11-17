@@ -86,6 +86,10 @@
             content: " *";
             color: red;
         }
+        .red-asterisk::before {
+            content: "* ";
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -145,7 +149,7 @@
                         data-callback="javascriptCallback"
                     ></div>
 
-                    <p>* Required</p>
+                    <p class = "red-asterisk">Required</p>
                     <button type="submit">Contact Roland</button>
                 </form>
 
@@ -155,7 +159,7 @@
     <footer>
         <p>Bluelines where on time is too late.</p>
         <p>&copy; 2024 Oakwood Trading Limited. All rights reserved.</p>
-        <p>Sorry just a gh test page not for public use</p>
+        <p>Sorry just a test page not for public use. Ref gh-ts</p>
     </footer>
 
 
