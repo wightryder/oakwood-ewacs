@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bluelines Assured Chauffeur Services</title>
     <style>
-
         body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
@@ -15,7 +14,7 @@
         }
         header {
             background-color: #00d4ff;
-            color: 004bb4;
+            color: #004bb4;
             padding: 20px 0;
             text-align: center;
         }
@@ -26,7 +25,7 @@
             padding: 10px;
         }
         nav a {
-            color: 003a8b;
+            color: #003a8b;
             padding: 0 15px;
             text-decoration: none;
             font-weight: bold;
@@ -40,7 +39,7 @@
         }
         
         h2 {
-            text-align:center;
+            text-align: center;
             text-indent: 0;
         }
         .services {
@@ -66,7 +65,7 @@
             bottom: 0;
             width: 100%;
         }
-        input[type="text"], input[type="email"], input[type="phone"], textarea {
+        input[type="text"], input[type="email"], input[type="tel"], textarea {
             width: 95%;
             padding: 10px;
             margin: 10px 0;
@@ -90,6 +89,15 @@
             content: "* ";
             color: red;
         }
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+
+            .services, .contact {
+                width: 90%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -112,9 +120,7 @@
             <ul>
                 <li>Enhanced DBS</li>
                 <li>Institute of Advanced Motoring Certification</li>
-                <li>Etc</li>
-                <li>Etc</li>
-                <li>Last Etc</li>
+                <li>Personalized Chauffeur Experience</li>
             </ul>
         </div>
     </section>
@@ -122,37 +128,32 @@
     <section id="contact">
         <div class="contact">
             <h2>Contact</h2>
-                <form action="https://submit-form.com/6kaGjGHIi">
-                    <label for="name" class="required">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Name" required="" />
+            <form action="https://submit-form.com/6kaGjGHIi">
+                <label for="name" class="required">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name" required>
 
-                    <label for="email" class="required">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Email" required="" />
+                <label for="email" class="required">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
 
-                    <label for="phone" class="required">Phone</label>
-                    <input type="phone" id="phone" name="phone" placeholder="Telephone number" required="" />
+                <label for="phone" class="required">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Telephone number" required>
 
-                    <label for="callback" class="required">Contact preference</label>
-                    <input type="text" id="callback" name="callback" placeholder="Phone, Email or Text Msg" required="" />
+                <label for="callback" class="required">Contact preference</label>
+                <input type="text" id="callback" name="callback" placeholder="Phone, Email or Text Msg" required>
 
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Optional Message"></textarea>
 
-                    <label for="message">Message</label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        placeholder="Optional Message"
-                    ></textarea>
+                <div
+                    class="cf-turnstile"
+                    data-sitekey="0x4AAAAAAA0P-SZzCVY8JD2r"
+                    data-callback="javascriptCallback"
+                    aria-label="Captcha Verification"
+                ></div>
 
-                    <div
-                        class="cf-turnstile"
-                        data-sitekey="0x4AAAAAAA0P-SZzCVY8JD2r"
-                        data-callback="javascriptCallback"
-                    ></div>
-
-                    <p class = "red-asterisk">Required</p>
-                    <button type="submit">Contact Roland</button>
-                </form>
-
+                <p class="red-asterisk">Required</p>
+                <button type="submit">Contact Roland</button>
+            </form>
         </div>
     </section>
 
@@ -162,8 +163,7 @@
         <p>Sorry just a test page not for public use. Ref gh-ts</p>
     </footer>
 
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
 </body>
 </html>
