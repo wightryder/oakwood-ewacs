@@ -1,69 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--v2 with fonts, color, formspark but no @media -->
+<!--v2025-03-06 flex responsive-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Film and TV unit Chaffer Service by Whitelines.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <title>Whitelines Chauffeur Services</title>
     <style>
-        body {
+        html, body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #3366cc;
+            overflow-x: hidden; /* Prevents horizontal scrolling */
+            background-color: #3366CC;
+            <!--background-image: url('background.jpg');
+            background-size: auto;
+            background-position: center;
+            background-repeat: repeat;
+            background-attachment: fixed; /*may cause problems on mobile*/ -->
         }
+
         header {
-            background-color: #00d4ff;
-            color: #004bb4;
+            background-color: #45D4FF;
+            color: #004BB4;
             padding: 20px 0;
             text-align: center;
         }
         nav {
             display: flex;
             justify-content: center;
-            background-color: #f5f5f5;
+            background-color: #F5F5F5;
             padding: 10px;
         }
         nav a {
-            color: #003a8b;
+            color: #003A8B;
             padding: 0 15px;
             text-decoration: none;
             font-weight: bold;
         }
         nav a:hover {
-            background-color: #00d4ff;
+            background-color: #00D4FF;
         }
-        section {
+/* Multi column         
+        .section-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
             padding: 20px;
-            text-align: left;
         }
-        
-        h2 {
+        .section-item {
+            flex: 1 1 45%;
+            max-width: 600px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+end Multi columg*/
+/*Single Column*/
+        .section-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center items horizontally */
+            gap: 20px; /* Consider larger gap */
+            padding: 20px;
+        }
+
+        .section-item {
+            flex: 1 1 auto; /* Items take up as much space as needed */
+            max-width: 600px; /* Keeps sections from being too wide */
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+/*End Single column*/
+
+
+        h1, h2, h5 {
             text-align: center;
-            text-indent: 0;
         }
-        .services {
-            background-color: white;
-            margin: 20px auto;
-            max-width: 600px;
-            padding: 20px;
-            text-indent: 50px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .contact {
-            background-color: white;
-            margin: 20px auto;
-            max-width: 600px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .about img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
         }
         footer {
             background-color: #000088;
             color: white;
             text-align: center;
             padding: 10px;
-            bottom: 0;
-            width: 100%;
+            width: 100%; /* Ensures it stays within the viewport */
+
         }
         input[type="text"], input[type="email"], input[type="tel"], textarea {
             width: 95%;
@@ -71,15 +101,16 @@
             margin: 10px 0;
             border: 1px solid #ccc;
         }
-        input[type="submit"] {
-            background-color: #333;
+        button[type="submit"] {
+            background-color: #666;
             color: white;
-            border: none;
             padding: 10px 20px;
             cursor: pointer;
+            border: none;
+            border-radius: 25px; 
         }
-        input[type="submit"]:hover {
-            background-color: #555;
+        button[type="submit"]:hover {
+            background-color: #333;
         }
         label.required:after {
             content: " *";
@@ -90,80 +121,58 @@
             color: red;
         }
         @media (max-width: 600px) {
-            nav {
+            .section-container {
                 flex-direction: column;
-            }
-
-            .services, .contact {
-                width: 90%;
+                align-items: center;
             }
         }
     </style>
 </head>
 <body>
-
     <header>
         <img src="logo.png" alt="Wacs Logo" width="200" height="100">
         <h1>Whitelines Chauffeur Services</h1>
         <p>The assured chauffeur service for the UK TV and Film industry</p>
-    </header>
-
+        <h2>Development website</h2>
+    </header><p>The assured chauffeur service for the UK TV and Film industry</p>
     <nav>
-        <a href="#services">Service</a>
+        <a href="#about">About Us</a>
         <a href="#contact">Contact Us</a>
     </nav>
-
-    <section id="services">
-        <div class="services">
-            <h2>Our Service</h2>
+    <div class="section-container">
+        <section id="about" class="section-item about">
+            <h2>About</h2>
             <p>We offer a premium licensed chauffeur service for the TV and film industry.</p>
             <ul>
                 <li>Enhanced DBS</li>
                 <li>Institute of Advanced Motoring Certification</li>
                 <li><a href="https://solentsoftware.co.uk">Book now</a></li>
             </ul>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="contact">
+        </section>
+        <section id="contact" class="section-item contact">
             <h2>Contact</h2>
-            <form action="https://submit-form.com/6kaGjGHIi">
+            <form action="https://submit-form.com/6kaGjGHIi-tbr" method="POST">
                 <label for="name" class="required">Name</label>
                 <input type="text" id="name" name="name" placeholder="Name" required>
-
                 <label for="email" class="required">Email</label>
                 <input type="email" id="email" name="email" placeholder="Email" required>
-
                 <label for="phone" class="required">Phone</label>
                 <input type="tel" id="phone" name="phone" placeholder="Telephone number" required>
-
                 <label for="callback" class="required">Contact preference</label>
                 <input type="text" id="callback" name="callback" placeholder="Phone, Email or Text Msg" required>
-
                 <label for="message">Message</label>
                 <textarea id="message" name="message" placeholder="Optional Message"></textarea>
-
-                <div
-                    class="cf-turnstile"
-                    data-sitekey="0x4AAAAAAA0P-SZzCVY8JD2r"
-                    data-callback="javascriptCallback"
-                    aria-label="Captcha Verification"
-                ></div>
-
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAAA0P-SZzCVY8JD2r" data-callback="javascriptCallback" aria-label="Captcha Verification"></div>
                 <p class="red-asterisk">Required</p>
                 <button type="submit">Contact Roland</button>
             </form>
-        </div>
-    </section>
-
+        </section>
+    </div>
     <footer>
         <p>Whitelines where on time is too late.</p>
         <p>&copy; 2024 Oakwood Trading Limited. All rights reserved.</p>
         <p>Sorry just a test page not for public use. Ref gh-ts</p>
     </footer>
-
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
-
 </body>
 </html>
