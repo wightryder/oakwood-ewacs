@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Framework v1.01 2025-03-29-->
+<!--Content v1.01 2025-03-31 self hosted fonts and webp images hero eager loading rest lazy. features and contact centered in mobile separate css-->
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Award-winning honey by Bavington Bees. Contact us for honey and bee-related products.">
+    <link rel="stylesheet" href="styles.css">
+    <title>Whitelines Chauffeur Services</title>
+</head>
+
+
+<body>
+    <header>
+        <img class="logo" src="logo.webp" alt="Logo" width="200" height="100">
+        <img class="mobile-strapline"src="strapline.webp" alt="Award Winning Honey" width="216" height="30">
+        <img class="strapline" src="strapline.webp" alt="Award Winning Honey" width="324" height="40">
+        <p>Development Website not for use</p>
+        <a href="https://www.instagram.com/bavington.bees/" target="_blank" aria-label="Visit our Instagram">
+            <img class="instagram-icon"src="instagram-icon.svg" alt="Instagram icon">
+        </a>
+
+    </header>
+
+    <nav>
+        <a href="#home" aria-current="page">Home</a>
+        <a href="https://solentsoftware.co.uk/">Book Now</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <section class="hero-container">
+        <section class="hero-image">
+            <img src="hero.webp" 
+                 alt="Honey Bees"
+                 loading="eager"
+                 fetchpriority="high"
+            >
+        </section>
+    </section>
+
+    <section class="intro-container" id="home">
+        <section class="intro-text">
+            <div  class="intro-title">
+              <h2>The assured chauffeur service for the UK TV and Film industry</h2> 
+          </div>
+            <p class="larger-text">We offer a premium licensed chauffeur service for the TV and film industry.</p>
+            <p>Introductory text goes here.</p>
+            <p>Make a <a href="https://solentsoftware.co.uk/">booking</a> or <a href="#contact">contact</a> us</p>
+        </section>
+        <section class="intro-icon-container">        
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Visit our Instagram">
+                <img class="intro-icon"src="instagram-icon.svg" alt="Instagram icon">
+            </a>                
+        </section>
+    </section>
+
+    <div class="feature-container">
+        <article class="feature-item">
+            <img src="square.webp" alt="Sample">
+            <h5>Title can go here</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>
+        
+        <article class="feature-item">
+            <img src="square.webp" alt="Sample">
+            <h5>Title can go here</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>
+
+        <article class="feature-item">
+            <img src="square.webp" alt="Sample">
+            <h5>Title can go here</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>
+
+
+    <div class="container-contact">
+        <section id="contact" class="item-contact">
+            <h2>Contact</h2>
+            <form 
+              action="https://submit-form.com/6kaGjGHIi" method="POST" 
+            >
+                <label for="name" class="required">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name" required aria-required="true">
+
+                <label for="email" class="required">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required aria-required="true">
+
+                <label for="phone" class="required">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Telephone number" required aria-required="true">
+
+                <label for="callback" class="required">Contact preference</label>
+                <input type="text" id="callback" name="callback" placeholder="Phone, Email or Text Msg" required aria-required="true">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Optional Message"></textarea>
+                
+                <p class="red-asterisk">Required</p>
+
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAABBXbZZ1UUA0JRhW" data-callback="javascriptCallback" aria-label="Captcha Verification"></div>                
+                <button type="submit">Contact Roland</button>
+            </form>
+          </section>
+        <br />
+        <a href="#home">To Top</a>
+    </div>
+    <footer>
+        <p>Whitelines where on time is too late.</p>
+        <p>&copy; 2024 Whitelines. All rights reserved.</p>
+</footer>
+
+<script 
+    src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer>
+</script>
+
+
+</body>
+</html>
