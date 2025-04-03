@@ -63,7 +63,7 @@
     nav {
         display: flex;
         justify-content: center;
-        background-color: #lightblue;
+        background-color:lightblue;
         padding: 10px;
     }
     nav a {
@@ -200,7 +200,7 @@
     footer {
         display: flex;
         flex-direction: column;
-        background-color: #lightblue;
+        background-color: lightblue;
         align-items: center; /* Center items horizontally */
         gap: 20px;
     }
